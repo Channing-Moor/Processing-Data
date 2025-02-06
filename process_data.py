@@ -8,6 +8,7 @@ name - date
 
 import csv
 from typing import Union
+record = dict[str, Union[str, int, float]]
 
 def get_records(data_filename: str) -> list[dict[str, Union[str, int]]]:
   """
@@ -27,10 +28,14 @@ def get_records(data_filename: str) -> list[dict[str, Union[str, int]]]:
 
   return records
 
+def summarize_by_month(records: list[reord]) -> dict[str, int]
+
 def main() -> None:
   data_filename: str = "resources/stolen_bikes.csv"
   records: list[dict[str, Union[str, int]]] = get_records(data_filename)
+  convert_fields(records)
 
+  summary:dict[str,int] = summarize_by_month()
   print(f"{len(records)} records read in.")
   print(records[0])
   print(records[0]["District"])
